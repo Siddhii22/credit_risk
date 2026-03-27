@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #c7f0f7, #c3a4e2);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .box {
+            background: rgb(247, 240, 246);
+            padding: 40px;
+            margin: 100px auto;
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .low {
+            color: green;
+        }
+        .high {
+            color: red;
+        }
+        a {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+<div class="box">
+    <h2>Prediction Result</h2>
+
+    {% if "Low" in prediction %}
+        <h3 class="low">{{ prediction }}</h3>
+        <p>Safe to approve loan ✅</p>
+    {% else %}
+        <h3 class="high">{{ prediction }}</h3>
+        <p>High risk borrower ⚠️</p>
+    {% endif %}
+
+    <a href="/">← Try Again</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Credit Risk Predictor</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #c7f0f7, #c3a4e2);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background: rgb(247, 240, 246);
+            padding: 30px;
+            margin: 60px auto;
+            width: 400px;
+            border-radius: 15px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0px 0px 25px rgba(0,0,0,0.2);
+        }
+        input, select {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h2>💳 Credit Risk Predictor</h2>
+
+<form action="/predict" method="post">
+
+<label>Loan Duration (months)</label>
+<input type="number" name="duration" required>
+
+<label>Loan Amount</label>
+<input type="number" name="amount" required>
+
+<label>Age</label>
+<input type="number" name="age" required>
+
+<label>Savings</label>
+<select name="savings">
+    <option value="0">Less than 100</option>
+    <option value="1">100–500</option>
+    <option value="2">500–1000</option>
+    <option value="3">1000+</option>
+</select>
+
+<label>Credit History</label>
+<select name="credit_history">
+    <option value="A30">No credits</option>
+    <option value="A31">All paid</option>
+    <option value="A32">Paid till now</option>
+    <option value="A33">Delay</option>
+    <option value="A34">Critical</option>
+</select>
+
+<label>Employment Duration</label>
+<select name="employment_duration">
+    <option value="A31">Unemployed</option>
+    <option value="A32">1–4 years</option>
+    <option value="A33">4–7 years</option>
+    <option value="A34">7+ years</option>
+</select>
+
+<label>Housing</label>
+<select name="housing">
+    <option value="A151">Rent</option>
+    <option value="A152">Own</option>
+    <option value="A153">Free</option>
+</select>
+
+<button type="submit">Predict Risk</button>
+
+</form>
+</div>
+</body>
+</html>
