@@ -30,4 +30,13 @@ This system can assist banks or financial institutions in assessing loan applica
 
 ## Run Locally
 pip install flask pandas scikit-learn
+
 python app.py
+
+
+## Application Preview
+### Home Page
+![Home](images/home.png)
+
+### Prediction Result
+![Result](images/result.png)
